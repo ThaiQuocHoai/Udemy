@@ -1,0 +1,61 @@
+.banner {
+  margin: $mg-2 0;
+  .banner__border__top {
+    height: 10px;
+    background: linear-gradient(
+      to right,
+      $color-purple,
+      $color-red-2,
+      $color-red-0
+    );
+  }
+  .banner__background {
+    height: 360px;
+    background-color: $color-black-0;
+    .banner__content {
+      width: 90%;
+      margin: auto;
+      //   padding-top: 50px;
+      text-align: center;
+      .banner__item {
+        padding: 50px;
+        @include styleText($color-white-0, $fs-3, $fw-normal);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .banner__item__second {
+        @include styleText($color-white-0, $fs-3, $fw-normal);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        i {
+          padding-top: 50px;
+        }
+        .banner__form {
+          h4 {
+            @include styleText($color-white-0, $fs-3, $fw-bold);
+          }
+          p {
+            @include styleText($color-white-0, $fs-0, $fw-normal);
+          }
+          button {
+            border: none;
+            @include styleText($color-white-0, $fs-0, $fw-bold);
+            background-color: $color-red-0;
+            padding: $pd-1;
+            &:hover {
+              background-color: $color-red-2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive("large"){
+  .banner__content{
+    i{
+      visibility: hidden;
+    }
+  }
+}

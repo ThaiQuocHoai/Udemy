@@ -1,0 +1,51 @@
+footer {
+  padding: 50px;
+  .links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .footer__item {
+      ul {
+        list-style: none;
+        li {
+          a {
+            text-decoration: none;
+            @include styleText($color-blue, $fs-1, $fw-normal);
+            &:hover {
+              @include styleText($color-black-0, $fs-1, $fw-normal);
+            }
+          }
+          #link__first {
+            @include styleText($color-blue, $fs-1, $fw-bold-1);
+            &:hover {
+              @include styleText($color-black-0, $fs-1, $fw-bold-1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .language {
+    .button {
+      padding: $pd-1 $pd-2;
+      border-radius: 0;
+    }
+    .dropdown__item {
+      a {
+        padding-left: $pd-0;
+        text-decoration: none;
+        @include styleText($color-black-0, $fs-0, $fw-normal);
+      }
+      &:hover{
+          background-color: $color-gray-5;
+      }
+    }
+  }
+}
+
+@include responsive("medium"){
+  .links{
+    ul{
+      display: none;
+    }
+  }
+}

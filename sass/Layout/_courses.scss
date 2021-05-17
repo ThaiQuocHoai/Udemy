@@ -1,0 +1,87 @@
+.course {
+  margin: $mg-2 $mg-2;
+  .course__content {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    .course__introitem {
+        height: 100%;
+        padding: 0 $pd-1;
+        background: $color-gray-5;
+      .course__intro {
+        position: absolute;
+        top: 40%;
+        h2 {
+          @include styleText($color-black-0, $fs-2 - 1, $fw-bold-1);
+        }
+        p {
+          @include styleText($color-black-0, $fs-0 + 1, $fw-normal);
+        }
+      }
+    }
+    .course__nav {
+      justify-content: space-between;
+      border: none;
+      .nav-item {
+        &:hover {
+          .nav-link {
+            border: none;
+            @include styleText($color-blue, $fs-0, $fw-normal);
+          }
+        }
+        .nav-link.active {
+          border: none;
+          border-bottom: 5px solid $color-blue;
+          @include styleText($color-black-0, $fs-0, $fw-normal);
+        }
+        .nav-link {
+          @include styleText($color-black-0, $fs-0, $fw-normal);
+          border: none;
+        }
+      }
+    }
+    .tab-content {
+      margin-top: $mg-2;
+      position: relative;
+      .card {
+        padding: 0;
+        .card-title {
+          @include styleText($color-black-0, $fs-0, $fw-bold);
+        }
+        .card-text {
+          @include styleText($color-gray-4, $fs-1, $fw-normal);
+        }
+        .course__rating {
+          display: flex;
+          .rating__star {
+            @include styleText($color-yellow, $fs-1, $fw-normal);
+          }
+          span:nth-child(2) {
+            @include styleText($color-gray-4, $fs-1, $fw-bold);
+          }
+          span:last-child {
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+            margin-left: $mg-0;
+          }
+        }
+        .price {
+          text-align: right;
+          margin: $mg-1 0;
+          .old__price {
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+            text-decoration: line-through;
+          }
+          .new__price {
+            @include styleText($color-black-0, $fs-0, $fw-bold);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive("large"){
+  .course__introitem{
+    display: none;
+  }
+}

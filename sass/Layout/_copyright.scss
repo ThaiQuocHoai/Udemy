@@ -1,0 +1,32 @@
+.copyright{
+    padding: $pd-2 50px;
+    .left{
+        img{
+            width: 110px;
+        }
+        span{
+            padding-left: $pd-2;
+            @include styleText($color-gray-4, $fs-1,$fw-normal);
+        }
+    }
+    .right{
+        text-align: right;
+        span{
+            padding-right: 6px;
+            a{
+                @include styleText($color-blue,$fs-1,$fw-normal);
+                &:hover{
+                    text-decoration: none;
+                    @include styleText($color-black-0,$fs-1,$fw-normal);
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium"){
+    .right{
+        text-align: left;
+    }
+
+}

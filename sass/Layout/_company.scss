@@ -1,0 +1,63 @@
+.companies {
+  padding-top: $mg-2;
+  background-color: $color-gray-5;
+  p{
+      @include styleText($color-gray-4, $fs-1, $fw-normal);
+      padding-bottom: $pd-1;
+  }
+  .companies__content {
+    .content__left {
+      border-right: 1px solid $color-gray-6;
+      padding: 30px 100px;
+      .title {
+        text-align: center;
+        a {
+          @include styleText($color-black-0, $fs-2 - 1, $fw-bold-1);
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      .button__content {
+        button {
+          background-color: $color-red-0;
+          @include styleText($color-white-0, $fs-0, $fw-bold);
+          padding: $pd-1;
+          border: none;
+          &:hover {
+            background-color: $color-red-2;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    .content__right {
+      padding: 30px 100px;
+      .title {
+        text-align: center;
+        a {
+          @include styleText($color-black-0, $fs-2 - 1, $fw-bold-1);
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      .button__content {
+        button {
+          background-color: $color-red-0;
+          @include styleText($color-white-0, $fs-0, $fw-bold);
+          padding: $pd-1;
+          border: none;
+          &:hover {
+            background-color: $color-red-2;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
